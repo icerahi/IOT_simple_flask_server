@@ -11,23 +11,18 @@
 	    
             <div class="col-md-6 col-sm-10 mt-5">
 		
-		{% if led.is_active == True %}
- 			      <a href="{{url_for('light_off')}}" >Light is On<img height='300' width='300' src="{{ url_for('static',filename='light_off.jpg')}}"  alt=""></a>
+		{% if led.is_active == False %}
+ 			      <a href="{{url_for('light_off')}}" >Light is On<img height='300' width='300' src="{{ url_for('static',filename='turn_on.jpg')}}"  alt=""></a>
 		{% else %}
 		
- 	              <a href="{{url_for('light_on')}}" > Light Is Off<img height='300' width='300' src="{{ url_for('static',filename='light_on.jpg')}}"  alt=""> </a>
+ 	              <a href="{{url_for('light_on')}}" > Light Is Off<img height='300' width='300' src="{{ url_for('static',filename='turn_off.jpg')}}"  alt=""> </a>
 		{% endif %}
+
      
             </div>
 	    
 	    
-            <div class="col-md-6 col-sm-10 mt-5">
-		{% if fan.is_active == False %}
- 		              <a href="{{url_for('fan_off')}}">Fan is On <img height='300' width='300' src="{{ url_for('static',filename='turn_off.jpg')}}"  alt=""> </a>
-		{% else %}
- 	               <a href="{{url_for('fan_on')}}">Fan Is Off <img height='300' width='300' src="{{ url_for('static',filename='turn_on.jpg')}}"  alt=""> </a>
-		{% endif %}
-             </div>
+      
 
             
         </div>
